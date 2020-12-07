@@ -71,6 +71,9 @@ Ankh.NoLoad
 **/.idea/**/contentModel.xml
 **/.idea/**/modules.xml
 
+**/.idea/**
+**/.vscode/**
+
 *.suo
 *.user
 .vs/
