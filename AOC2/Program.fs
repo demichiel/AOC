@@ -2,7 +2,7 @@
 open AOC2
 
 [<EntryPoint>]
-let main argv =
+let main _ =
     let path =
         Path.Combine(__SOURCE_DIRECTORY__, "input.txt")
 
