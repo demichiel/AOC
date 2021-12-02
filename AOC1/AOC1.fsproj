@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="AOC1.fs" />
     <Content Include="input.txt" />
     <Compile Include="Program.fs" />
   </ItemGroup>

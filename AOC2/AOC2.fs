@@ -5,13 +5,13 @@ open FSharpx.Text.Strings
 
 module Domain =
     type Position = { X: int; Y: int }
+
     type PositionWithAim = { X: int; Y: int; Aim: int }
 
     type Direction =
         | Up
         | Down
         | Forward
-        | Backward
         | Nothing
 
     type Command = { Direction: Direction; Distance: int }
@@ -37,26 +37,17 @@ module Part1 =
         | "forward", distance ->
             { Direction = Forward
               Distance = distance }
-        | "backward", distance ->
-            { Direction = Backward
-              Distance = distance }
         | _, _ -> { Direction = Nothing; Distance = 0 }
 
 
-    let parse (data: seq<string>) =
+    let parseToCommands (data: seq<string>) =
         data
         |> Seq.map toWords
         |> Seq.map Seq.toList
         |> Seq.map (fun x -> (x.Item 0, x.Item 1 |> int))
         |> Seq.map parseToCommand
 
-    let printPosition (position: Position) =
-        printfn $"{position}"
-        position
-
-    let doCommand command position =
-        printPosition position |> ignore
-
+    let doCommand command position : Position =
         match command.Direction with
         | Up ->
             { position with
@@ -67,12 +58,7 @@ module Part1 =
         | Forward ->
             { position with
                   X = position.X + command.Distance }
-        | Backward ->
-            { position with
-                  X = position.X - command.Distance }
         | Nothing -> position
-
-
 
 
 module Part2 =
@@ -85,26 +71,17 @@ module Part2 =
         | "forward", distance ->
             { Direction = Forward
               Distance = distance }
-        | "backward", distance ->
-            { Direction = Backward
-              Distance = distance }
         | _, _ -> { Direction = Nothing; Distance = 0 }
 
 
-    let parse (data: seq<string>) =
+    let parseToCommands (data: seq<string>) =
         data
         |> Seq.map toWords
         |> Seq.map Seq.toList
         |> Seq.map (fun x -> (x.Item 0, x.Item 1 |> int))
         |> Seq.map parseToCommand
 
-    let printPosition (position: PositionWithAim) =
-        printfn $"{position}"
-        position
-
-    let doCommand command position =
-        printPosition position |> ignore
-
+    let doCommand command position : PositionWithAim =
         match command.Direction with
         | Up ->
             { position with
@@ -116,5 +93,4 @@ module Part2 =
             { position with
                   X = position.X + command.Distance
                   Y = position.Y + (position.Aim * command.Distance) }
-        | Backward -> position
         | Nothing -> position
