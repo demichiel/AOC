@@ -1,6 +1,5 @@
 ﻿namespace AOC2
 
-open System.IO
 open FSharpx.Text.Strings
 
 module Domain =
@@ -17,16 +16,6 @@ module Domain =
     type Command = { Direction: Direction; Distance: int }
 
 open Domain
-
-module FileHelper =
-    let readFile path =
-        seq {
-            use reader = new StreamReader(File.OpenRead(path))
-
-            while not reader.EndOfStream do
-                reader.ReadLine()
-        }
-
 module Part1 =
     let parseToCommand (data: string * int) =
         match data with

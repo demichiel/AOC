@@ -1,11 +1,12 @@
 ﻿open System.IO
 open AOC2
+open FileHelper
 
 [<EntryPoint>]
 let main _ =
     let path =
         Path.Combine(__SOURCE_DIRECTORY__, "input.txt")
-
+        
     let origin: Domain.Position = { X = 0; Y = 0 }
 
     let data = FileHelper.readFile path

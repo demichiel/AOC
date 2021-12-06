@@ -7,6 +7,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AOC1", "AOC1\AOC1.fsproj", 
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AOC2", "AOC2\AOC2.fsproj", "{18519301-90FD-49EF-97F2-220A89A8646F}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AOC3", "AOC3\AOC3.fsproj", "{64AB4F77-28E5-43E9-8A7E-89D230088B51}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FileHelper", "FileHelper\FileHelper.fsproj", "{7C1CCA81-76AF-405C-A740-0CA1656E24A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{18519301-90FD-49EF-97F2-220A89A8646F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18519301-90FD-49EF-97F2-220A89A8646F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18519301-90FD-49EF-97F2-220A89A8646F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AB4F77-28E5-43E9-8A7E-89D230088B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AB4F77-28E5-43E9-8A7E-89D230088B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AB4F77-28E5-43E9-8A7E-89D230088B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AB4F77-28E5-43E9-8A7E-89D230088B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1CCA81-76AF-405C-A740-0CA1656E24A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1CCA81-76AF-405C-A740-0CA1656E24A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1CCA81-76AF-405C-A740-0CA1656E24A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1CCA81-76AF-405C-A740-0CA1656E24A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

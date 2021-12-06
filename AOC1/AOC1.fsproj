@@ -8,6 +8,10 @@
     <Compile Include="AOC1.fs" />
     <Content Include="input.txt" />
     <Compile Include="Program.fs" />
+    <Content Include="paket.references" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileHelper\FileHelper.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
